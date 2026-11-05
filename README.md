@@ -27,4 +27,11 @@ packages/                # NuGet 패키지
 
 ## 실행 방법
 
-Visual Studio에서 `pro1.sln`을 열고 실행합니다. Firebase 접속 정보(`BasePath`, `AuthSecret`)는 `MainWindow.xaml.cs`에서 설정합니다.
+Firebase 접속 정보는 코드에 넣지 않고 환경 변수에서 읽습니다. 실행 전에 Windows 사용자 환경 변수를 설정합니다.
+
+```bash
+setx FIREBASE_BASE_PATH "https://<프로젝트 ID>-default-rtdb.firebaseio.com/"
+setx FIREBASE_AUTH_SECRET "<데이터베이스 비밀번호>"
+```
+
+환경 변수를 설정한 뒤 Visual Studio를 다시 열고 `pro1.sln`을 실행합니다.

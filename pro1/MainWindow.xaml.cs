@@ -23,8 +23,8 @@ namespace pro1
 
         IFirebaseConfig config = new FirebaseConfig
         {
-            BasePath = "https://vocalist-ef97c-default-rtdb.firebaseio.com/",
-            AuthSecret = "mXcAu7GqGQ0nXRaWkzypmgLRuwBOIR1DjSkzTuoo"
+            BasePath = Environment.GetEnvironmentVariable("FIREBASE_BASE_PATH"),
+            AuthSecret = Environment.GetEnvironmentVariable("FIREBASE_AUTH_SECRET")
         };
         IFirebaseClient client;
 
